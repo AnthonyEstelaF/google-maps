@@ -1,0 +1,36 @@
+{{title}}
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="icon">
+  </agm-marker>
+   <agm-marker [latitude]=45.533289 [longitude]=9.232103 [iconUrl]="control">
+  </agm-marker>
+   <agm-marker [latitude]=45.531786 [longitude]=9.235451 [iconUrl]="compu">
+  </agm-marker>
+  <agm-marker [latitude]=45.531831 [longitude]=9.24133 [iconUrl]="chiave">
+  </agm-marker>
+  <agm-circle [latitude]="lat" [longitude]="lng"
+      [radius]="5000"
+      [fillColor]="'red'">
+  </agm-circle>
+  <agm-circle [latitude]="lat1" [longitude]="lgn1"
+      [radius]="5000"
+      [fillColor]="colorC">
+  </agm-circle>
+
+  <agm-polygon [paths]="triangle" [fillColor]="'red'">
+</agm-polygon>
+
+  <agm-polygon [paths]="rectangle" [fillColor]="colorR">
+</agm-polygon>
+
+</agm-map>
+
+<P>SCEGLI UN BOTTONE PER IL CERCHIO:</P>
+<button (click)="changeColor('red')"> rosso</button>
+<button (click)="changeColor('green')">verde</button>
+<button (click)="changeColor('yellow')">giallo</button>
+
+<P>SCEGLI UN BOTTONE PER IL RETTANGOLO:</P>
+<button (click)="changeRect('red')"> rosso</button>
+<button (click)="changeRect('green')">verde</button>
+<button (click)="changeRect('yellow')">giallo</button>
